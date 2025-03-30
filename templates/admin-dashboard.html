@@ -4,8 +4,7 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Instaprint Dashboard</title>
-     <link href="./../static/css/main.css" rel="stylesheet" />
-     <link href="./../../static/css/admin-dashboard.css" rel="stylesheet" />
+     <link href="/static/css/admin-dashboard.css" rel="stylesheet" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
  </head>
@@ -32,12 +31,35 @@
          </leftmenu>
  
          <content class="contents">
-             <div class="stats">
-                 <div class="card">₱{{ data.total_sales }} <br> Total Sales</div>
-                 <div class="card">{{ data.printed_pages }} <br> Printed Pages</div>
-                 <div class="card">{{ data.files_uploaded }} <br> Files Uploaded</div>
-                 <div class="card">₱{{ data.current_balance }} <br> Current Balance</div>
-             </div>
+            <div class="stats">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="currency">₱</span><span class="amount">{{ data.total_sales }}</span>
+                    </div>
+                    <div class="card-label">Total Sales</div>
+
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="amount">{{ data.printed_pages }}</span>
+                    </div>
+                    <div class="card-label">Printed Pages</div>
+
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="amount">{{ data.files_uploaded }}</span>
+                    </div>
+                    <div class="card-label">Files Uploaded</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="currency">₱</span><span class="amount">{{ data.current_balance }}</span>
+                    </div>
+                    <div class="card-label">Current Balance</div>
+                </div>
+            </div>
  
              <div class="charts">
                  <div class="chart-box">

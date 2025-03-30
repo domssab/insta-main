@@ -112,7 +112,28 @@
     border-radius: 8px;
     flex: 1;
     text-align: center;
+    font-size: 25px;;
 }
+.card-content {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.currency {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.amount {
+    font-size: 26px;
+}
+
+.card-label {
+    font-size: 14px;
+    color: #444;
+    margin-top: 5px;
+}
+
 .charts {
     display: flex;
     gap: 20px;
