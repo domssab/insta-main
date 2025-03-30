@@ -543,7 +543,3 @@ if __name__ == "__main__":
 
     # Start the Flask app
     socketio.run(app, debug=False)
-
-@app.route('/admin-user')
-def admin_user():
-    return render_template('admin-user.html')
