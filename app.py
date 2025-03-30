@@ -151,8 +151,8 @@ def process_image(image):
     return processed_image, rounded_price
 
 @app.route('/')
-def file_upload():
-    return render_template('file-upload.html')
+def admin_user():
+    return render_template('admin-user.html')
 
 # Route for manual file upload page
 @app.route('/manual-upload')
@@ -543,3 +543,7 @@ if __name__ == "__main__":
 
     # Start the Flask app
     socketio.run(app, debug=False)
+
+@app.route('/admin-user')
+def admin_user():
+    return render_template('admin-user.html')
