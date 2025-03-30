@@ -160,10 +160,25 @@ def admin_user():
 def file_upload():
     return render_template('file-upload.html')
 
-# Route for the file upload page
+# Route for the index
 @app.route('/index')
 def index():
     return render_template('index.html')
+
+@app.route('/admin-dashboard')
+def admin_dashboard():
+    data = {
+        "total_sales": 5000,
+        "printed_pages": 120,
+        "files_uploaded": 50,
+        "current_balance": 3000,
+        "sales_history": [
+            {"method": "GCash", "amount": 500, "date": "2024-03-30", "time": "14:00"},
+            {"method": "PayMaya", "amount": 250, "date": "2024-03-29", "time": "11:30"}
+        ],
+        "sales_chart": [500, 600, 700, 800]  # Example sales data for Chart.js
+    }
+    return render_template('admin-dashboard.html', data=data)
 
 # Route for manual file upload page
 @app.route('/manual-upload')
