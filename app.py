@@ -150,9 +150,20 @@ def process_image(image):
 
     return processed_image, rounded_price
 
+# Route for the main page
 @app.route('/')
 def admin_user():
     return render_template('admin-user.html')
+
+# Route for the file upload page
+@app.route('/file-upload')
+def file_upload():
+    return render_template('file-upload.html')
+
+# Route for the file upload page
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
 # Route for manual file upload page
 @app.route('/manual-upload')
