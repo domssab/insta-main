@@ -155,16 +155,6 @@ def process_image(image):
 def admin_user():
     return render_template('admin-user.html')
 
-# Route for the file upload page
-@app.route('/file-upload')
-def file_upload():
-    return render_template('file-upload.html')
-
-# Route for the index
-@app.route('/index')
-def index():
-    return render_template('index.html')
-
 @app.route('/admin-dashboard')
 def admin_dashboard():
     data = {
@@ -179,6 +169,36 @@ def admin_dashboard():
         "sales_chart": [500, 600, 700, 800]  # Example sales data for Chart.js
     }
     return render_template('admin-dashboard.html', data=data)
+
+# Route for the admin printed pages
+@app.route('/admin-printed-pages')
+def admin_printed_pages():
+    return render_template('admin-printed-pages.html')
+
+# Route for the admin files upload
+@app.route('/admin-files-upload')
+def admin_files_upload():
+    return render_template('admin-files-upload.html')
+
+# Route for the admin balance
+@app.route('/admin-balance')
+def admin_balance():
+    return render_template('admin-balance.html')
+
+# Route for the admin feedbacks
+@app.route('/admin-feedbacks')
+def admin_feedbacks():
+    return render_template('admin-feedbacks.html')
+
+# Route for the file upload page
+@app.route('/file-upload')
+def file_upload():
+    return render_template('file-upload.html')
+
+# Route for the index
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
 # Route for manual file upload page
 @app.route('/manual-upload')
@@ -569,3 +589,41 @@ if __name__ == "__main__":
 
     # Start the Flask app
     socketio.run(app, debug=False)
+
+
+# ADMIN SIDE
+
+@app.route('/admin-dashboard')
+def admin_dashboard():
+    data = {
+        "total_sales": 5000,
+        "printed_pages": 120,
+        "files_uploaded": 50,
+        "current_balance": 3000,
+        "sales_history": [
+            {"method": "GCash", "amount": 500, "date": "2024-03-30", "time": "14:00"},
+            {"method": "PayMaya", "amount": 250, "date": "2024-03-29", "time": "11:30"}
+        ],
+        "sales_chart": [500, 600, 700, 800]  # Example sales data for Chart.js
+    }
+    return render_template('admin-dashboard.html', data=data)
+
+# Route for the admin printed pages
+@app.route('/admin-printed-pages')
+def admin_printed_pages():
+    return render_template('admin-printed-pages.html')
+
+# Route for the admin files upload
+@app.route('/admin-files-upload')
+def admin_files_upload():
+    return render_template('admin-files-upload.html')
+
+# Route for the admin balance
+@app.route('/admin-balance')
+def admin_balance():
+    return render_template('admin-balance.html')
+
+# Route for the admin feedbacks
+@app.route('/admin-feedbacks')
+def admin_feedbacks():
+    return render_template('admin-feedbacks.html')
