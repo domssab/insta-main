@@ -175,29 +175,34 @@ def admin_dashboard():
 def admin_printed_pages():
     printed = [
         {
-            "date": "9/18/2024",
-            "time": "11:52 PM",
-            "event": "Paper Jam – The paper is stuck in the printer, causing a blockage."
+            "file": "instaprint.docx",
+            "type": "docx",
+            "pages": "79 pages",
+            "time": "4:52 PM",
         },
         {
-            "date": "9/18/2024",
-            "time": "11:52 PM",
-            "event": "Low Ink/Toner – The printer's ink or toner is running low and needs to be replaced."
+            "file": "Document 1.pdf",
+            "type": "pdf",
+            "pages": "15 pages",
+            "time": "6:52 PM"
         },
         {
-            "date": "9/18/2024",
-            "time": "11:52 PM",
-            "event": "Printer Offline – The printer is not connected to the network or is turned off."
+            "file": "Final paper.pdf",
+            "type": "pdf",
+            "pages": "101 pages",
+            "time": "8:52 PM",
         },
         {
-            "date": "9/18/2024",
-            "time": "11:52 PM",
-            "event": "Out of Paper – The printer has run out of paper in the tray."
+            "file": "Pic.jpg",
+            "type": "jpg",
+            "pages": "1 page",
+            "time": "10:52 PM",
         },
         {
-            "date": "9/18/2024",
+            "file": "Paperr.docx",
+            "type": "docx",
+            "pages": "2 pages",
             "time": "11:52 PM",
-            "event": "Printer Error – A general error, often requiring troubleshooting or a reset."
         }
     ]
     return render_template('admin-printed-pages.html', printed=printed)
