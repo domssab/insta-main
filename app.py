@@ -173,7 +173,34 @@ def admin_dashboard():
 # Route for the admin printed pages
 @app.route('/admin-printed-pages')
 def admin_printed_pages():
-    return render_template('admin-printed-pages.html')
+    printed = [
+        {
+            "date": "9/18/2024",
+            "time": "11:52 PM",
+            "event": "Paper Jam – The paper is stuck in the printer, causing a blockage."
+        },
+        {
+            "date": "9/18/2024",
+            "time": "11:52 PM",
+            "event": "Low Ink/Toner – The printer's ink or toner is running low and needs to be replaced."
+        },
+        {
+            "date": "9/18/2024",
+            "time": "11:52 PM",
+            "event": "Printer Offline – The printer is not connected to the network or is turned off."
+        },
+        {
+            "date": "9/18/2024",
+            "time": "11:52 PM",
+            "event": "Out of Paper – The printer has run out of paper in the tray."
+        },
+        {
+            "date": "9/18/2024",
+            "time": "11:52 PM",
+            "event": "Printer Error – A general error, often requiring troubleshooting or a reset."
+        }
+    ]
+    return render_template('admin-printed-pages.html', printed=printed)
 
 # Route for the admin files upload
 @app.route('/admin-files-upload')
