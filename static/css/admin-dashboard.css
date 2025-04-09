@@ -156,12 +156,12 @@ h1 {
   color: #FFF;
 }
 
-.log-table {
+.files-table {
   width: 100%;
 }
 
-.log-header,
-.log-entry {
+.files-header,
+.files-entry {
   display: flex;
   justify-content: space-between;
   padding: 15px;
@@ -171,29 +171,29 @@ h1 {
   background-color: #f7f7f7;
 }
 
-.log-header {
+.files-header {
   font-weight: bold;
   background-color: transparent;
   border-bottom: 2px solid #ccc;
   margin-bottom: 20px;
 }
 
-.log-file {
+.files-file {
   width: 25%;
   font-weight: 500;
 }
 
-.log-type {
+.files-type {
   width: 25%;
   font-weight: 500;
 }
 
-.log-pages {
+.files-pages {
   width: 25%;
   font-weight: 500;
 }
 
-.log-time {
+.files-time {
   width: 25%;
   font-weight: 500;
 }

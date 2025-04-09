@@ -31,19 +31,19 @@
  
          <content class="contents">
             <h1>Files Upload</h1>
-            <div class="log-table">
-                <div class="log-header">
-                    <div class="log-file">File</div>
-                    <div class="log-type">Type</div>
-                    <div class="log-pages">Pages</div>
-                    <div class="log-time">Time</div>
+            <div class="files-table">
+                <div class="files-header">
+                    <div class="files-file">File</div>
+                    <div class="files-type">Type</div>
+                    <div class="files-pages">Pages</div>
+                    <div class="files-time">Time</div>
                 </div>
-                {% for log in printed %}
-                <div class="log-entry">
-                    <div class="log-file">{{ log.file }}</div>
-                    <div class="log-type">{{ log.type }}</div>
-                    <div class="log-pages">{{ log.pages }}</div>
-                    <div class="log-time">{{ log.time }}</div>
+                {% for files in uploaded %}
+                <div class="files-entry">
+                    <div class="files-file">{{ files.file }}</div>
+                    <div class="files-type">{{ files.type }}</div>
+                    <div class="files-pages">{{ files.pages }}</div>
+                    <div class="files-time">{{ files.time }}</div>
                 </div>
                 {% endfor %}
             </div>

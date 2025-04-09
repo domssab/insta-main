@@ -173,7 +173,7 @@ def admin_dashboard():
 # Route for the admin files upload
 @app.route('/admin-files-upload')
 def admin_printed_pages():
-    printed = [
+    uploaded = [
         {
             "file": "instaprint.docx",
             "type": "docx",
@@ -205,7 +205,7 @@ def admin_printed_pages():
             "time": "11:52 PM",
         }
     ]
-    return render_template('admin-files-upload.html', printed=printed)
+    return render_template('admin-files-upload.html', uploaded=uploaded)
 
 # Route for the admin balance
 @app.route('/admin-balance')
