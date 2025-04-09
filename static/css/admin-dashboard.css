@@ -148,7 +148,7 @@
     flex: 1;
 }
 
-/* Printed Pages */
+/* Files Upload */
 
 h1 {
   margin-bottom: 30px;
@@ -196,4 +196,37 @@ h1 {
 .files-time {
   width: 25%;
   font-weight: 500;
+}
+
+/* Activity Log */
+
+.log-table {
+  width: 100%;
+}
+
+.log-header,
+.log-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #f7f7f7;
+}
+
+.log-header {
+  font-weight: bold;
+  background-color: transparent;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.log-date {
+  width: 25%;
+  font-weight: 500;
+}
+
+.log-event {
+  width: 70%;
 }
