@@ -207,6 +207,38 @@ def admin_printed_pages():
     ]
     return render_template('admin-files-upload.html', uploaded=uploaded)
 
+# Route for the admin activity log
+@app.route('/admin-activity-log')
+def admin_activity_log():
+    printed = [
+        {
+            "date": "9/18/2024",
+            "time": "11:52 PM",
+            "event": "Paper Jam – The paper is stuck in the printer, causing a blockage."
+        },
+        {
+            "date": "9/18/2024",
+            "time": "11:52 PM",
+            "event": "Low Ink/Toner – The printer's ink or toner is running low and needs to be replaced."
+        },
+        {
+            "date": "9/18/2024",
+            "time": "11:52 PM",
+            "event": "Printer Offline – The printer is not connected to the network or is turned off."
+        },
+        {
+            "date": "9/18/2024",
+            "time": "11:52 PM",
+            "event": "Out of Paper – The printer has run out of paper in the tray."
+        },
+        {
+            "date": "9/18/2024",
+            "time": "11:52 PM",
+            "event": "Printer Error – A general error, often requiring troubleshooting or a reset."
+        }
+    ]
+    return render_template('admin-activity-log.html', printed=printed)
+
 # Route for the admin balance
 @app.route('/admin-balance')
 def admin_balance():
