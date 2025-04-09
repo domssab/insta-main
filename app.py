@@ -170,8 +170,8 @@ def admin_dashboard():
     }
     return render_template('admin-dashboard.html', data=data)
 
-# Route for the admin printed pages
-@app.route('/admin-printed-pages')
+# Route for the admin files upload
+@app.route('/admin-files-upload')
 def admin_printed_pages():
     printed = [
         {
@@ -205,12 +205,7 @@ def admin_printed_pages():
             "time": "11:52 PM",
         }
     ]
-    return render_template('admin-printed-pages.html', printed=printed)
-
-# Route for the admin files upload
-@app.route('/admin-files-upload')
-def admin_files_upload():
-    return render_template('admin-files-upload.html')
+    return render_template('admin-files-upload.html', printed=printed)
 
 # Route for the admin balance
 @app.route('/admin-balance')
